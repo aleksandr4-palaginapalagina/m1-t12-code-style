@@ -3,7 +3,8 @@ import java.util.Scanner;
 public class DepositCalculator {
 
     public static void main(String[] args) {
-        new DepositCalculator().calculateContributionResult();
+        new DepositCalculator().calculateContributionResult(); /* contribution значит "донация" или "помощь", т. е. безвозмездная, 
+        тут лучше использовать deposit, насколько я знаю */
     }
 
     double calculateComplexPercent(double amount, double yearRate, int period) {
@@ -11,7 +12,8 @@ public class DepositCalculator {
         double result;
         int places = 2;
 
-        pay = amount * Math.pow((1 + yearRate / 12), 12 * period);
+        pay = amount * Math.pow((1 + yearRate / 12), 12 * period); /* молодец, что ставишь пробелы перед и после каждого знака операции, кажется,
+        я здесь не исправила */
         result = calculateResult(pay, places);
         return result;
     }
